@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">안드로이드 스터디 그룹</string>
+    <string name="edit_message">메세지를 입력하세요</string>
+    <string name="button_send">전송</string>
+</resources>

@@ -27,7 +27,6 @@
         android:ems="10"
         android:hint="@string/edit_message"
         android:inputType="textPersonName"
-        android:text="@string/edit_message"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent" />
