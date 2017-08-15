@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
      * This is where the magic happens when you push the right button.
      * Oh baby.
      *
-     * @param view
+     * @param view Should be the DisplayMessageActivity where our message will show
      */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
