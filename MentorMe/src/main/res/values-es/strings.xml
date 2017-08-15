@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MentorMe</string>
-    <string name="button_send">Emniar</string>
-    <string name="edit_message">Introdusca un mensaje</string>
-    <string name="DisplayTextView">placeholder</string>
+    <string name="app_description">placeholder</string>
+    <string name="app_welcome">placeholder</string>
+    <string name="mentor_and_mentee">placeholder</string>
+    <string name="need_mentoring">placeholder</string>
+    <string name="want_to_mentor">placeholder</string>
+    <string name="new_mentor_heading">placeholder</string>
+    <string name="password">placeholder</string>
+    <string name="username">placeholder</string>
+    <string name="skill">placeholder</string>
+    <string name="skill_experience_description">placeholder</string>
+    <string name="new_mentor_submit_button">placeholder</string>
 </resources>

@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">MentorMe</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
-    <string name="DisplayTextView">placeholder</string>
+    <string name="app_description">MentorMe is an app to help you find the right mentor to help you grow. Mass education leaves people behind, and apprenticeship doesn\'t scale. We believe mentorship is the happy medium that can help the most people acquire the most skills in the most effective way. We\'re glad you\'re here to join us!</string>
+    <string name="app_welcome">Welcome to MentorMe!</string>
+    <string name="mentor_and_mentee">Want to be both a mentor and mentee? Don\'t worry! You can do both. Just pick one first.</string>
+    <string name="want_to_mentor">I want to teach others my skills!</string>
+    <string name="need_mentoring">I want to build a new skill!</string>
+    <string name="new_mentor_heading">Setup Mentor Profile</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="skill">Skill</string>
+    <string name="skill_experience_description">Experience in this Skill</string>
+    <string name="new_mentor_submit_button">Make Me a Mentor!</string>
 </resources>
