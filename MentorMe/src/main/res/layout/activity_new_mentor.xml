@@ -10,6 +10,8 @@
         android:id="@+id/new_mentor_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/new_mentor_heading"
         android:textSize="36sp"
@@ -17,107 +19,190 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/new_mentor_username_form"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/username"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_username_label"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_username_label" />
-
-    <TextView
-        android:id="@+id/new_mentor_username_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/username"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_heading" />
-
-    <TextView
-        android:id="@+id/new_mentor_password_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/password"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_username_form"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_username_form" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_password_label"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_password_label" />
-
-    <TextView
-        android:id="@+id/new_mentor_skill_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/skill"
-        app:layout_constraintLeft_toLeftOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-    <AutoCompleteTextView
-        android:id="@+id/new_mentor_skill_form"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/skill_experience_description"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_label"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_label" />
-
-    <TextView
-        android:id="@+id/new_mentor_skill_experience_description_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/skill_experience_description"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_form"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_form" />
-
-    <EditText
-        android:id="@+id/new_mentor_skill_experience_description_form"
-        android:layout_width="349dp"
-        android:layout_height="96dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="7dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_experience_description_label"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_experience_description_label" />
-
-    <Button
-        android:id="@+id/new_mentor_submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/new_mentor_submit_button"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_experience_description_form" />
+        app:layout_constraintTop_toBottomOf="@+id/new_mentor_heading"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/new_mentor_username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/username"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/new_mentor_username_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="textPersonName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_username_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_username_label" />
+
+            <TextView
+                android:id="@+id/new_mentor_password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/password"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_username_form"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_username_form" />
+
+            <EditText
+                android:id="@+id/new_mentor_password_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_password_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_password_label" />
+
+            <TextView
+                android:id="@+id/new_mentor_display_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/display_name"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_password_form"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_password_form" />
+
+            <EditText
+                android:id="@+id/new_mentor_display_name_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_display_name_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_display_name_label" />
+
+            <TextView
+                android:id="@+id/new_mentor_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/email"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_display_name_form"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_display_name_form" />
+
+            <EditText
+                android:id="@+id/new_mentor_email_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_email_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_email_label" />
+
+            <TextView
+                android:id="@+id/new_mentor_skill_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/skill"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_email_form"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_email_form" />
+
+            <AutoCompleteTextView
+                android:id="@+id/new_mentor_skill_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_label" />
+
+            <TextView
+                android:id="@+id/new_mentor_skill_experience_description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/skill_experience_description"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_form"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_form" />
+
+            <EditText
+                android:id="@+id/new_mentor_skill_experience_description_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                app:layout_constraintLeft_toLeftOf="@+id/new_mentor_skill_experience_description_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_experience_description_label" />
+
+            <Button
+                android:id="@+id/new_mentor_submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/new_mentor_submit_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_mentor_skill_experience_description_form" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

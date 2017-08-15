@@ -12,4 +12,6 @@
     <string name="skill">placeholder</string>
     <string name="skill_experience_description">placeholder</string>
     <string name="new_mentor_submit_button">placeholder</string>
+    <string name="display_name">placeholder</string>
+    <string name="email">placeholder</string>
 </resources>

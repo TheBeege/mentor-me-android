@@ -11,4 +11,6 @@
     <string name="skill">Skill</string>
     <string name="skill_experience_description">Experience in this Skill</string>
     <string name="new_mentor_submit_button">Make Me a Mentor!</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
 </resources>
