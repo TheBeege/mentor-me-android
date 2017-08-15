@@ -1,4 +1,4 @@
-package org.learnteachcode.seoul.android.androidstudygroup;
+package com.beegeworks.education.mentorme;
 
 import org.junit.Test;
 

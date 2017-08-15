@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MentorMe</string>
+    <string name="button_send">Emniar</string>
+    <string name="edit_message">Introdusca un mensaje</string>
+</resources>

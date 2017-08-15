@@ -1,4 +1,4 @@
-package org.learnteachcode.seoul.android.androidstudygroup;
+package com.beegeworks.education.mentorme;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "org.learnteachcode.seoul.android.androidstudygroup.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.beegeworks.education.mentorme.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

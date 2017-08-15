@@ -1,4 +1,4 @@
-package org.learnteachcode.seoul.android.androidstudygroup;
+package com.beegeworks.education.mentorme;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.learnteachcode.seoul.android.androidstudygroup.DisplayMessageActivity">
+    tools:context="com.beegeworks.education.mentorme.DisplayMessageActivity">
 
     <TextView
         android:id="@+id/textView"
