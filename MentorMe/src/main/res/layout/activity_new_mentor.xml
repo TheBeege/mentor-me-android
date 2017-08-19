@@ -196,6 +196,7 @@
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="24dp"
+                android:onClick="submitRegistration"
                 android:text="@string/new_mentor_submit_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
