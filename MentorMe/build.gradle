@@ -18,13 +18,13 @@ android {
             buildConfigField 'String', 'API_URL', 'http://mentorme.co.kr/api/'
         }
 
-        dev {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             applicationIdSuffix ".dev"
             versionNameSuffix "-DEV"
             debuggable true
-            buildConfigField 'String', 'API_URL', 'http://localhost:14000/'
+            buildConfigField 'String', 'API_URL', '"http://localhost:14000/"'
         }
     }
 }
