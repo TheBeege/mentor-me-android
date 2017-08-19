@@ -1,5 +1,6 @@
 package com.beegeworks.education.mentorme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -42,6 +43,7 @@ public class NewMentorActivity extends AppCompatActivity {
         }
 
         // Request a JSON response from the provided URL.
+        final Intent intent = new Intent(this, NewMentorSuccess.class);
         JsonObjectRequest createNewUserRequest = new JsonObjectRequest(
                 Request.Method.POST,
                 BuildConfig.API_URL + apiPath,
@@ -50,11 +52,15 @@ public class NewMentorActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("new mentor activity", "onResponse: lol");
+                        intent.putExtra("response", response.toString());
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.d("new mentor activity", "That didn't work!");
+                intent.putExtra("response", error.toString());
+                startActivity(intent);
             }
         });
         // Add the request to the RequestQueue.
