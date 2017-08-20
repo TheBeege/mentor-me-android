@@ -19,6 +19,8 @@ import org.json.JSONObject;
 
 public class NewMentorActivity extends AppCompatActivity {
 
+    private static final String TAG = "NewMentorActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,8 @@ public class NewMentorActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        Log.d(TAG, "url: " + BuildConfig.API_URL + apiPath);
+
         // Request a JSON response from the provided URL.
         final Intent intent = new Intent(this, NewMentorSuccess.class);
         JsonObjectRequest createNewUserRequest = new JsonObjectRequest(
@@ -51,14 +55,14 @@ public class NewMentorActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("new mentor activity", "onResponse: lol");
+                        Log.d(TAG, "onResponse: lol");
                         intent.putExtra("response", response.toString());
                         startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("new mentor activity", "That didn't work!");
+                Log.d(TAG, "That didn't work! -- " + error.toString());
                 intent.putExtra("response", error.toString());
                 startActivity(intent);
             }
