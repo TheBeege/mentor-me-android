@@ -45,6 +45,7 @@
         android:id="@+id/button2"
         android:layout_width="160dp"
         android:layout_height="94dp"
+        android:onClick="searchMentors"
         android:text="@string/need_mentoring"
         app:layout_constraintBaseline_toBaselineOf="@+id/button"
         app:layout_constraintLeft_toRightOf="@+id/button"

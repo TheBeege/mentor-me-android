@@ -44,6 +44,41 @@ public class NewMentorActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        /*
+        User
+        {
+          "Email": "fake9000@email.com",
+          "Extra": {
+            "Data": "string",
+            "Name": "string"
+          },
+          "IsActive": true,
+          "IsStaff": true,
+          "Langs": {},
+          "Nums": 0,
+          "Password": "string",
+          "ShouldSkip": "string",
+          "Status": 0,
+          "Updated": "string",
+          "UserName": "fakeusername",
+          "unexport": true,
+          "unexportBool": true
+        }
+         */
+
+        /*
+        {
+          "Description": "string",
+          "Level": 0,
+          "Topic": {
+            "Id": 0
+          },
+          "User": {
+            "Id": 0
+          }
+        }
+         */
+
         Log.d(TAG, "url: " + BuildConfig.API_URL + apiPath);
 
         // Request a JSON response from the provided URL.

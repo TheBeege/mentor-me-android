@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.beegeworks.education.mentorme.search.SearchMentorActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void setupNewMentor(@SuppressWarnings("UnusedParameters") View view) {
         Intent intent = new Intent(this, NewMentorActivity.class);
+        startActivity(intent);
+    }
+
+    public void searchMentors(View view) {
+        Intent intent = new Intent(this, SearchMentorActivity.class);
         startActivity(intent);
     }
 }

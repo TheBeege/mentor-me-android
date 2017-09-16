@@ -23,7 +23,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".NewMentorSuccess"></activity>
+        <activity android:name=".NewMentorSuccess" />
+        <activity
+            android:name=".search.SearchMentorActivity"
+            android:label="@string/title_activity_search_mentor"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
