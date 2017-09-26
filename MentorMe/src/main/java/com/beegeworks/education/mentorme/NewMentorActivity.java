@@ -12,9 +12,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
+import com.beegeworks.education.mentorme.api.ApiAdapter;
+import com.beegeworks.education.mentorme.api.form.NewUserForm;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class NewMentorActivity extends AppCompatActivity {
@@ -29,20 +29,15 @@ public class NewMentorActivity extends AppCompatActivity {
 
     public void submitRegistration(View view) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(this);
         String apiPath = "user";
 
-        JSONObject userDataJson = new JSONObject();
-        try {
-            userDataJson.put("username", ((EditText) findViewById(R.id.new_mentor_username_form)).getText().toString());
-            userDataJson.put("password", ((EditText) findViewById(R.id.new_mentor_password_form)).getText().toString());
-            userDataJson.put("displayName", ((EditText) findViewById(R.id.new_mentor_display_name_form)).getText().toString());
-            userDataJson.put("email", ((EditText) findViewById(R.id.new_mentor_email_form)).getText().toString());
-            userDataJson.put("skill", ((EditText) findViewById(R.id.new_mentor_skill_form)).getText().toString());
-            userDataJson.put("skillExperience", ((EditText) findViewById(R.id.new_mentor_skill_experience_description_form)).getText().toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        NewUserForm newUserForm = new NewUserForm();
+        newUserForm.setUsername(((EditText) findViewById(R.id.new_mentor_username_form)).getText().toString());
+        newUserForm.setPassword(((EditText) findViewById(R.id.new_mentor_password_form)).getText().toString());
+        newUserForm.setDisplayName(((EditText) findViewById(R.id.new_mentor_display_name_form)).getText().toString());
+        newUserForm.setEmail(((EditText) findViewById(R.id.new_mentor_email_form)).getText().toString());
+        userDataJson.put("skill", ((EditText) findViewById(R.id.new_mentor_skill_form)).getText().toString());
+        userDataJson.put("skillExperience", ((EditText) findViewById(R.id.new_mentor_skill_experience_description_form)).getText().toString());
 
         Log.d(TAG, "url: " + BuildConfig.API_URL + apiPath);
 
@@ -68,6 +63,6 @@ public class NewMentorActivity extends AppCompatActivity {
             }
         });
         // Add the request to the RequestQueue.
-        queue.add(createNewUserRequest);
+        ApiAdapter.getInstance(this.getApplicationContext()).getRequestQueue().add(createNewUserRequest);
     }
 }
