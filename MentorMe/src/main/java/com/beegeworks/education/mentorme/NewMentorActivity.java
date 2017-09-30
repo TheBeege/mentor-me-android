@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -36,8 +35,8 @@ public class NewMentorActivity extends AppCompatActivity {
         newUserForm.setPassword(((EditText) findViewById(R.id.new_mentor_password_form)).getText().toString());
         newUserForm.setDisplayName(((EditText) findViewById(R.id.new_mentor_display_name_form)).getText().toString());
         newUserForm.setEmail(((EditText) findViewById(R.id.new_mentor_email_form)).getText().toString());
-        userDataJson.put("skill", ((EditText) findViewById(R.id.new_mentor_skill_form)).getText().toString());
-        userDataJson.put("skillExperience", ((EditText) findViewById(R.id.new_mentor_skill_experience_description_form)).getText().toString());
+        newUserForm.setSkill(((EditText) findViewById(R.id.new_mentor_skill_form)).getText().toString());
+        newUserForm.setSkillExperience(((EditText) findViewById(R.id.new_mentor_skill_experience_description_form)).getText().toString());
 
         Log.d(TAG, "url: " + BuildConfig.API_URL + apiPath);
 
@@ -46,7 +45,7 @@ public class NewMentorActivity extends AppCompatActivity {
         JsonObjectRequest createNewUserRequest = new JsonObjectRequest(
                 Request.Method.POST,
                 BuildConfig.API_URL + apiPath,
-                userDataJson,
+                newUserForm.getJsonObject(),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {

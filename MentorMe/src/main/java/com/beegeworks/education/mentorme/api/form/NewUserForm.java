@@ -11,41 +11,39 @@ import lombok.Getter;
 
 @Getter
 public class NewUserForm {
+    @Getter
     private JSONObject jsonObject;
 
     public void setUsername(String username) {
-        try {
-            jsonObject.put("username", username);
-        } catch (JSONException e) {
-            reportSettingFailure(e, "username", username);
-            throw new ApplicationException("Failed to set username");
-        }
+        setFormField("username", username);
     }
 
     public void setPassword(String password) {
-        try {
-            jsonObject.put("password", password);
-        } catch (JSONException e) {
-            reportSettingFailure(e, "password", password);
-            throw new ApplicationException("Failed to set password");
-        }
+        setFormField("password", password);
     }
 
     public void setDisplayName(String displayName) {
-        try {
-            jsonObject.put("displayName", displayName);
-        } catch (JSONException e) {
-            reportSettingFailure(e, "displayName", displayName);
-            throw new ApplicationException("Failed to set display name");
-        }
+        setFormField("displayName", displayName);
     }
 
     public void setEmail(String email) {
+        setFormField("email", email);
+    }
+
+    public void setSkill(String skill) {
+        setFormField("skill", skill);
+    }
+
+    public void setSkillExperience(String skillExperience) {
+        setFormField("skillExperience", skillExperience);
+    }
+
+    private void setFormField(String fieldName, String fieldValue) {
         try {
-            jsonObject.put("email", email);
+            jsonObject.put(fieldName, fieldValue);
         } catch (JSONException e) {
-            reportSettingFailure(e, "email", email);
-            throw new ApplicationException("Failed to set email");
+            reportSettingFailure(e, fieldName, fieldValue);
+            throw new ApplicationException("Failed to set " + fieldName);
         }
     }
 
